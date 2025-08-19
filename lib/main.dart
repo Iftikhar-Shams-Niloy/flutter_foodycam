@@ -14,7 +14,7 @@ class FoodClassifierApp extends StatelessWidget {
       title: 'Food Classifier',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.white,
       ),
       home: const HomeScreen(),

@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_foodycam/presentation/widgets/custom_elevated_buttons.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../data/model_loader.dart';
 import '../../data/image_processor.dart';
@@ -44,16 +45,7 @@ class _HomePageState extends State<HomeScreen> {
       _selectedImage = imageFile;
     });
 
-    // Run prediction
     final prediction = await _predictionService.predict(imageFile);
-
-    // // --- DEBUGGING ---
-    // // Check the console output in VS Code for this message
-    // print("Prediction result: $prediction");
-    // if (prediction != null) {
-    //   print("Label: ${prediction.label}, Confidence: ${prediction.confidence}");
-    // }
-    // // --- END DEBUGGING ---
 
     if (mounted) {
       setState(() {
@@ -93,9 +85,16 @@ class _HomePageState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Food Classifier"),
+        title: const Text(
+          "FoodyCam",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.amber,
+          ),
+        ),
         centerTitle: true,
-        elevation: 0,
+        elevation: 5,
       ),
       body: Center(
         child: Column(
@@ -104,7 +103,7 @@ class _HomePageState extends State<HomeScreen> {
             CameraView(
               image: _selectedImage != null ? FileImage(_selectedImage!) : null,
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 12),
 
             _isLoading
                 ? const CircularProgressIndicator()
@@ -117,19 +116,24 @@ class _HomePageState extends State<HomeScreen> {
                     "Food Classification",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
 
-            ElevatedButton.icon(
-              onPressed: _pickImageFromCamera,
-              icon: const Icon(Icons.camera_alt),
-              label: const Text("Capture Food Image"),
-            ),
-            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CustomElevatedButton(
+                  onPressed: _pickImageFromCamera,
+                  icon: Icons.camera_alt,
+                  text: "Capture\nFood Image",
+                ),
 
-            ElevatedButton.icon(
-              onPressed: _pickImageFromGallery,
-              icon: const Icon(Icons.photo_library),
-              label: const Text("Select From Gallery"),
+                // For gallery button
+                CustomElevatedButton(
+                  onPressed: _pickImageFromGallery,
+                  icon: Icons.photo_library,
+                  text: "Select\nFrom Gallery",
+                ),
+              ],
             ),
           ],
         ),

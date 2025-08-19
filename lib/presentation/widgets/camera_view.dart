@@ -11,7 +11,7 @@ class CameraView extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
     return Container(
       height: screenSize.width - 50,
-      width: screenSize.height - 50,
+      width: screenSize.width - 50,
       decoration: BoxDecoration(
         color: Colors.grey[300],
         borderRadius: BorderRadius.circular(12),
