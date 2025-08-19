@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../data/model_loader.dart';
 import '../../data/image_processor.dart';
 import '../../data/prediction_service.dart';
-import '../../domain/entities/prediction.dart';
+import '../../domain/prediction.dart';
 import '../widgets/camera_view.dart';
 import '../widgets/result_card.dart';
 

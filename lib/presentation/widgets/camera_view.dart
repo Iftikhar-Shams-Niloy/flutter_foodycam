@@ -8,9 +8,10 @@ class CameraView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 200,
-      width: 200,
+      height: screenSize.width - 50,
+      width: screenSize.height - 50,
       decoration: BoxDecoration(
         color: Colors.grey[300],
         borderRadius: BorderRadius.circular(12),
@@ -18,9 +19,7 @@ class CameraView extends StatelessWidget {
             ? DecorationImage(image: image!, fit: BoxFit.cover)
             : null,
       ),
-      child: image == null
-          ? const Center(child: Text("Image Preview"))
-          : null,
+      child: image == null ? const Center(child: Text("Image Preview")) : null,
     );
   }
 }

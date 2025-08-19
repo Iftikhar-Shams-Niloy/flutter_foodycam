@@ -1,8 +1,7 @@
 import 'dart:io';
-import '../../data/prediction_service.dart';
-import '../entities/prediction.dart';
+import '../data/prediction_service.dart';
+import 'prediction.dart';
 
-/// Use case to classify food image
 class ClassifyFood {
   final PredictionService _service;
 

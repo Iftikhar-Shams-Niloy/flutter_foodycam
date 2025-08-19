@@ -1,6 +1,5 @@
-import '../../domain/entities/prediction.dart';
+import '../../domain/prediction.dart';
 
-/// Simple prediction state model
 class PredictionState {
   final bool isLoading;
   final Prediction? prediction;
