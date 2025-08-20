@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_foodycam/core/constants.dart';
+import 'package:flutter_foodycam/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_foodycam/presentation/widgets/custom_elevated_buttons.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../data/model_loader.dart';
@@ -85,20 +85,7 @@ class _HomePageState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "FoodyCam",
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: customPurple,
-          ),
-        ),
-        backgroundColor: Colors.indigo.shade100,
-        scrolledUnderElevation: 20,
-        centerTitle: true,
-        elevation: 20,
-      ),
+      appBar: CustomAppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
