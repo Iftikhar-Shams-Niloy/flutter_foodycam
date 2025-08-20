@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../core/constants.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
@@ -6,28 +7,26 @@ class CustomElevatedButton extends StatelessWidget {
     required this.onPressed,
     required this.icon,
     required this.text,
-    this.iconSize,
-    this.fontSize,
   });
 
   final VoidCallback onPressed;
   final IconData icon;
   final String text;
-  final double? iconSize;
-  final double? fontSize;
 
   @override
   Widget build(BuildContext context) {
-    final double defaultIconSize = MediaQuery.of(context).size.width * 0.1;
-    final double defaultFontSize = MediaQuery.of(context).size.width * 0.035;
+    final double iconSize = MediaQuery.of(context).size.width * 0.1;
+    final double fontSize = MediaQuery.of(context).size.width * 0.035;
 
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.4,
       height: MediaQuery.of(context).size.width * 0.4,
       child: ElevatedButton(
-        onPressed: onPressed, // Fixed: removed the arrow function
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.indigo.shade100,
           elevation: 8,
+          shadowColor: Colors.black,
           padding: const EdgeInsets.all(8),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
@@ -36,15 +35,16 @@ class CustomElevatedButton extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon, // Use the passed icon
-              size: iconSize ?? defaultIconSize,
-            ),
+            Icon(icon, size: iconSize, color: customPurple),
             const SizedBox(height: 8),
             Text(
-              text, // Use the passed text
+              text,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: fontSize ?? defaultFontSize),
+              style: TextStyle(
+                fontSize: fontSize,
+                color: customPurple,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ],
         ),

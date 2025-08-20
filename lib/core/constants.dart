@@ -1,9 +1,14 @@
-/// Core constants for model input/output
+import 'package:flutter/material.dart';
+
 class Constants {
-  static const int inputSize = 192; // Example model input size (224x224)
-  static const double mean = 0; // Normalization mean (if required)
-  static const double std = 255; // Normalization std (if required)
+  static const int inputSize = 192;
+  static const double mean = 0;
+  static const double std = 255;
 
   static const String modelPath = "assets/food_101_model.tflite";
   static const String labelsPath = "assets/food_101_labels.txt";
 }
+
+// Custom colors
+const Color customPurple = Color.fromARGB(255, 70, 35, 129);
+const Color customPurpleBackground = Color.fromARGB(255, 65, 77, 130);

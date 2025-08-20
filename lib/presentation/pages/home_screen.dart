@@ -90,7 +90,7 @@ class _HomePageState extends State<HomeScreen> {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
-            color: Colors.amber,
+            color: Colors.indigo,
           ),
         ),
         centerTitle: true,
@@ -127,7 +127,6 @@ class _HomePageState extends State<HomeScreen> {
                   text: "Capture\nFood Image",
                 ),
 
-                // For gallery button
                 CustomElevatedButton(
                   onPressed: _pickImageFromGallery,
                   icon: Icons.photo_library,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../core/constants.dart';
 
-/// Widget to display prediction result
 class ResultCard extends StatelessWidget {
   final String label;
   final double confidence;
@@ -12,9 +12,12 @@ class ResultCard extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
     return Container(
       width: screenSize.width - 50,
+      padding: EdgeInsets.only(top: 8),
       child: Card(
+        color: Colors.indigo.shade100,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        elevation: 3,
+        elevation: 8,
+
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16),
           child: Column(
@@ -22,6 +25,7 @@ class ResultCard extends StatelessWidget {
               Text(
                 label,
                 style: const TextStyle(
+                  color: customPurple,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -29,7 +33,11 @@ class ResultCard extends StatelessWidget {
               const SizedBox(height: 4),
               Text(
                 "Confidence: ${(confidence * 100).toStringAsFixed(2)}%",
-                style: const TextStyle(fontSize: 16, color: Colors.black54),
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.deepPurple,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'presentation/pages/home_screen.dart';
+import 'core/constants.dart';
 
 void main() {
   runApp(const FoodClassifierApp());
@@ -15,7 +16,7 @@ class FoodClassifierApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: customPurpleBackground,
       ),
       home: const HomeScreen(),
     );
