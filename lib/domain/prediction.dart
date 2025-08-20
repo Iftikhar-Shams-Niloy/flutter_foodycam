@@ -1,4 +1,3 @@
-/// Entity representing a prediction result
 class Prediction {
   final String label;
   final double confidence;

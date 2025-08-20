@@ -3,7 +3,7 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import '../core/constants.dart';
 import '../core/error_handler.dart';
 
-/// Loads TFLite model and labels
+/// Load TFLite model and labels
 class ModelLoader {
   Interpreter? _interpreter;
   List<String> _labels = [];

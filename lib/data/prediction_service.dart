@@ -48,7 +48,7 @@ class PredictionService {
 
       DebugLogger.predictionStep("<<< Preparing Output Buffer >>>");
 
-      // Always use int output since your model returns uint8
+      // Always use int output since model uint8
       final output = List<int>.filled(
         outputTensor.shape.reduce((a, b) => a * b),
         0,
