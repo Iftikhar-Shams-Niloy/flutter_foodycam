@@ -14,7 +14,6 @@
 <p align="center">
   <a href="https://github.com/Iftikhar-Shams-Niloy/flutter_foodycam/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Iftikhar-Shams-Niloy/flutter_foodycam?style=flat"></a>
   <a href="https://github.com/Iftikhar-Shams-Niloy/flutter_foodycam/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Iftikhar-Shams-Niloy/flutter_foodycam"></a>
-  <a href="https://github.com/Iftikhar-Shams-Niloy/flutter_foodycam/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-TBD-informational"></a>
 </p>
 
 <hr/>
