@@ -102,7 +102,8 @@ flutter run -d windows   # or macos/linux
 │  │   │
 │  │   └─ widgets/
 │  │       ├─ camera_view.dart               # Widget to preview camera
-│  │       ├─ custom_elevated_buttons.dart   # Custom styled elevated buttons
+│  │       ├─ custom_app_bar.dart            # Custom styles app bar widget for home screen
+│  │       ├─ custom_elevated_buttons.dart   # Custom styled elevated buttons widget for home screen
 │  │       └─ result_card.dart               # Widget to show prediction result
 │  │
 │  └─ main.dart                  # Entry point of the app
