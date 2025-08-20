@@ -14,7 +14,9 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomePageState();
+  State<HomeScreen> createState() {
+    return _HomePageState();
+  }
 }
 
 class _HomePageState extends State<HomeScreen> {

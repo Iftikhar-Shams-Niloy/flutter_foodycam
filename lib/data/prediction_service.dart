@@ -4,7 +4,7 @@ import 'model_loader.dart';
 import 'image_processor.dart';
 import '../domain/prediction.dart';
 import '../core/error_handler.dart';
-import '../core/debug_logger.dart'; // Import the new debug logger
+import '../core/debug_logger.dart';
 
 class PredictionService {
   final ModelLoader _modelLoader;
@@ -42,12 +42,10 @@ class PredictionService {
       final preprocessedImage = _imageProcessor.preprocess(imageFile);
       DebugLogger.success("<<< Image Preprocessing Completed >>>");
 
-      // Convert to model input format
       DebugLogger.predictionStep("<<< Converting Image >>>");
       final input = preprocessedImage.reshape(inputTensor.shape);
       DebugLogger.modelInfo("<<< Input Converted Shape: >>>", input.shape);
 
-      // Prepare output - your model outputs uint8 (0-255)
       DebugLogger.predictionStep("<<< Preparing Output Buffer >>>");
 
       // Always use int output since your model returns uint8
@@ -69,10 +67,8 @@ class PredictionService {
         probabilities.length,
       );
 
-      // Debug: print top 5 predictions
-      DebugLogger.topPredictions(_modelLoader.labels, probabilities, 5);
+      // DebugLogger.topPredictions(_modelLoader.labels, probabilities, 5);
 
-      // Find the highest confidence prediction
       double maxConfidence = 0;
       int maxIndex = -1;
       for (int i = 0; i < probabilities.length; i++) {
@@ -92,7 +88,6 @@ class PredictionService {
         return null;
       }
 
-      // Check if labels are loaded correctly
       if (_modelLoader.labels.isEmpty) {
         DebugLogger.error("<<< Labels List Empty! >>>");
         return null;
@@ -113,7 +108,7 @@ class PredictionService {
       DebugLogger.predictionResult(prediction.label, prediction.confidence);
       return prediction;
     } catch (e, st) {
-      ErrorHandler.logError(e, st); // Keep error handling separate
+      ErrorHandler.logError(e, st);
       return null;
     }
   }
