@@ -12,7 +12,6 @@ class ResultCard extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
     return Container(
       width: screenSize.width - 50,
-      padding: EdgeInsets.only(top: 8),
       child: Card(
         color: Colors.indigo.shade100,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -35,8 +34,8 @@ class ResultCard extends StatelessWidget {
                 "Confidence: ${(confidence * 100).toStringAsFixed(2)}%",
                 style: const TextStyle(
                   fontSize: 16,
-                  color: Colors.deepPurple,
-                  fontWeight: FontWeight.w500,
+                  color: customPurple,
+                  fontWeight: FontWeight.w300,
                 ),
               ),
             ],

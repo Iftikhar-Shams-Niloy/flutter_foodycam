@@ -11,6 +11,7 @@ class CameraView extends StatelessWidget {
     return Material(
       elevation: 8,
       shadowColor: Colors.deepPurple,
+      borderRadius: BorderRadius.circular(12),
       child: Container(
         height: screenSize.height / 2,
         width: screenSize.width - 50,
@@ -22,7 +23,15 @@ class CameraView extends StatelessWidget {
               ? DecorationImage(image: image!, fit: BoxFit.cover)
               : null,
         ),
-        child: image == null ? const Center(child: Text("Image Preview")) : null,
+        child: image == null
+            ? const Center(
+                child: Text(
+                  "Capture a photo /\n Select one from gallery\n to preview here!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, color: Colors.black54),
+                ),
+              )
+            : null,
       ),
     );
   }

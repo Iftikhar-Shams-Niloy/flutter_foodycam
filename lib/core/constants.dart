@@ -10,5 +10,5 @@ class Constants {
 }
 
 // Custom colors
-const Color customPurple = Color.fromARGB(255, 70, 35, 129);
+const Color customPurple = Color.fromARGB(255, 69, 45, 112);
 const Color customPurpleBackground = Color.fromARGB(255, 65, 77, 130);

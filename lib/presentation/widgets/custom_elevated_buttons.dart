@@ -36,7 +36,6 @@ class CustomElevatedButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(icon, size: iconSize, color: customPurple),
-            const SizedBox(height: 8),
             Text(
               text,
               textAlign: TextAlign.center,

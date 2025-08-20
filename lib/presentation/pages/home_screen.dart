@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_foodycam/core/constants.dart';
 import 'package:flutter_foodycam/presentation/widgets/custom_elevated_buttons.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../data/model_loader.dart';
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomeScreen> {
   Future<void> _classifyImage(File imageFile) async {
     setState(() {
       _isLoading = true;
-      _prediction = null; // Reset previous prediction
+      _prediction = null;
       _selectedImage = imageFile;
     });
 
@@ -90,11 +91,13 @@ class _HomePageState extends State<HomeScreen> {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
-            color: Colors.indigo,
+            color: customPurple,
           ),
         ),
+        backgroundColor: Colors.indigo.shade100,
+        scrolledUnderElevation: 20,
         centerTitle: true,
-        elevation: 5,
+        elevation: 20,
       ),
       body: Center(
         child: Column(
@@ -103,7 +106,8 @@ class _HomePageState extends State<HomeScreen> {
             CameraView(
               image: _selectedImage != null ? FileImage(_selectedImage!) : null,
             ),
-            const SizedBox(height: 12),
+
+            const SizedBox(height: 8),
 
             _isLoading
                 ? const CircularProgressIndicator()
@@ -112,11 +116,9 @@ class _HomePageState extends State<HomeScreen> {
                     label: _prediction!.label,
                     confidence: _prediction!.confidence,
                   )
-                : const Text(
-                    "Food Classification",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                  ),
-            const SizedBox(height: 20),
+                : ResultCard(label: "N/A", confidence: 0.00),
+
+            const SizedBox(height: 8),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
