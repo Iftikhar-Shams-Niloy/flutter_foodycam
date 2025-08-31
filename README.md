@@ -18,7 +18,7 @@
 
 <hr/>
 
-<h2>✨ Features</h2>
+<h2> Features</h2>
 <ul>
   <li><strong>Camera-first UX</strong>: capture and organize food photos (extendable to filters, tags, sharing).</li>
   <li><strong>Cross-platform</strong>: Android, iOS, Web, Windows, macOS, and Linux from a single codebase.</li>
@@ -26,12 +26,12 @@
   <li><strong>Clean structure</strong>: conventional Flutter project layout for easy navigation and contribution.</li>
 </ul>
 
-<h2>📸 Screenshots of the App</h2>
+<h2> Screenshots of the App</h2>
 <p>
   <img src="foodyCam_Sample.jpg" alt="Home screen" />
 </p>
 
-<h2>🚀 Quick Start</h2>
+<h2> Quick Start</h2>
 
 <h3>Prerequisites</h3>
 <ul>
@@ -58,7 +58,7 @@ flutter config --enable-linux-desktop
 flutter run -d windows   # or macos/linux
 </code></pre>
 
-<h2>🤖 AI Notebook (Optional)</h2>
+<h2> AI Notebook (Optional)</h2>
 <p>
   This repository includes <code>AI_model_loading_and_testing_model.ipynb</code> for experimenting with model loading/testing on images.
   You can open it in Jupyter or Google Colab and adapt any working pipeline to Flutter (e.g., via TensorFlow Lite).
@@ -69,7 +69,7 @@ flutter run -d windows   # or macos/linux
   <li>Export/convert models (e.g., to TFLite) and integrate into the Flutter app.</li>
 </ol>
 
-<h2>📂 Project Structure</h2>
+<h2> Project Structure</h2>
 <pre><code>flutter_foodycam/
 ├─ android/       # Android platform code
 ├─ ios/           # iOS platform code
@@ -114,7 +114,7 @@ flutter run -d windows   # or macos/linux
 </code></pre>
 
 
-<h2>⚙️ Configuration & Environment</h2>
+<h2> Configuration & Environment</h2>
 <ul>
   <li>Ensure required camera/gallery permissions are configured for Android/iOS.</li>
   <li>Add any runtime configuration (e.g., API keys) via <code>--dart-define</code> or environment files if needed.</li>
@@ -127,7 +127,7 @@ flutter run -d windows   # or macos/linux
   List key packages here (camera, image picker, state management, ML bindings, etc.) once finalized.
 </p>
 
-<h2>📁 Build</h2>
+<h2> Build</h2>
 <ul>
   <li><strong>Android (APK/AppBundle)</strong>: <code>flutter build apk</code> / <code>flutter build appbundle</code></li>
   <li><strong>iOS</strong>: <code>flutter build ios</code> (then archive via Xcode)</li>
@@ -135,14 +135,14 @@ flutter run -d windows   # or macos/linux
   <li><strong>Desktop</strong>: <code>flutter build windows|macos|linux</code></li>
 </ul>
 
-<h2>🤝 To Contribute In This Project</h2>
+<h2> To Contribute In This Project</h2>
 <ol>
   <li>Fork the repo &amp; create a feature branch: <code>git checkout -b feature/awesome</code></li>
   <li>Commit changes: <code>git commit -m "feat: add awesome"</code></li>
   <li>Push to your fork and open a Pull Request.</li>
 </ol>
 
-<h2>🗺️ Roadmap Ideas </h2>
+<h2> Roadmap Ideas </h2>
 <ul>
   <li>Classify and idenfity an image of food.</li>
   <li>Total offline application.</li>
