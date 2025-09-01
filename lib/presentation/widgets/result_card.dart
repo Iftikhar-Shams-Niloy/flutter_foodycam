@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../core/constants.dart';
 
 class ResultCard extends StatelessWidget {
   final String label;
@@ -13,10 +12,8 @@ class ResultCard extends StatelessWidget {
     return Container(
       width: screenSize.width - 50,
       child: Card(
-        color: Colors.indigo.shade100,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 8,
-
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16),
           child: Column(
@@ -24,7 +21,6 @@ class ResultCard extends StatelessWidget {
               Text(
                 label,
                 style: const TextStyle(
-                  color: customPurple,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -34,7 +30,6 @@ class ResultCard extends StatelessWidget {
                 "Confidence: ${(confidence * 100).toStringAsFixed(2)}%",
                 style: const TextStyle(
                   fontSize: 16,
-                  color: customPurple,
                   fontWeight: FontWeight.w300,
                 ),
               ),

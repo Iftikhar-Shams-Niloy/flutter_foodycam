@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../core/constants.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -13,18 +12,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: Padding(
-        padding: const EdgeInsets.all(5),
-        child: Image.asset('assets/foodycam_logo.png', fit: BoxFit.contain),
+        padding: const EdgeInsets.all(8),
+        child: Image.asset(
+          'assets/foodycam_logo_round.png',
+          fit: BoxFit.contain,
+        ),
       ),
       title: const Text(
         "FoodyCam",
-        style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: customPurple,
-        ),
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
-      backgroundColor: Colors.indigo.shade100,
       scrolledUnderElevation: 20,
       centerTitle: true,
       elevation: 20,
