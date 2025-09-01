@@ -8,7 +8,12 @@ void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((
     func,
   ) {
-    runApp(const FoodClassifierApp());
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]).then((_) {
+      runApp(const FoodClassifierApp());
+    });
   });
 }
 
@@ -22,37 +27,51 @@ class FoodClassifierApp extends StatelessWidget {
 
       theme: ThemeData(
         colorScheme: colorSchemeLight,
-        scaffoldBackgroundColor: colorSchemeLight.surfaceDim,
+        scaffoldBackgroundColor: colorSchemeLight.primaryFixedDim,
         appBarTheme: const AppBarTheme().copyWith(
-          backgroundColor: colorSchemeLight.onPrimaryContainer,
-          foregroundColor: colorSchemeLight.onPrimary,
+          backgroundColor: colorSchemeLight.primary,
+          foregroundColor: Colors.white,
         ),
         cardTheme: const CardThemeData().copyWith(
           color: colorSchemeLight.primaryContainer,
-          margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          margin: const EdgeInsets.symmetric(horizontal: 2, vertical: 8),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: colorSchemeLight.primaryContainer,
+            iconColor: colorSchemeLight.primary,
+            foregroundColor: colorSchemeLight.primary,
           ),
+        ),
+        textTheme: ThemeData.light().textTheme.copyWith(
+          bodySmall: TextStyle(color: colorSchemeLight.primary),
+          bodyMedium: TextStyle(color: colorSchemeLight.primary),
+          bodyLarge: TextStyle(color: colorSchemeLight.primary),
         ),
       ),
 
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: colorSchemeDark,
-        scaffoldBackgroundColor: colorSchemeDark.primaryFixedDim,
+        scaffoldBackgroundColor: colorSchemeDark.primaryContainer,
         appBarTheme: const AppBarTheme().copyWith(
-          backgroundColor: colorSchemeDark.primaryContainer,
-          foregroundColor: colorSchemeDark.onPrimary,
+          backgroundColor: colorSchemeDark.inversePrimary,
+          foregroundColor: Colors.white,
         ),
         cardTheme: const CardThemeData().copyWith(
-          color: colorSchemeDark.primaryContainer,
-          margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          color: colorSchemeDark.primary,
+          margin: const EdgeInsets.symmetric(horizontal: 2, vertical: 8),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: colorSchemeDark.primaryContainer,
+            backgroundColor: colorSchemeDark.primary,
+            iconColor: colorSchemeDark.onPrimary,
+            foregroundColor: colorSchemeDark.onPrimary,
           ),
+        ),
+        textTheme: ThemeData.dark().textTheme.copyWith(
+          bodySmall: TextStyle(color: colorSchemeDark.onPrimary),
+          bodyMedium: TextStyle(color: colorSchemeDark.onPrimary),
+          bodyLarge: TextStyle(color: colorSchemeDark.onPrimary),
         ),
       ),
 

@@ -22,9 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         "FoodyCam",
         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
-      scrolledUnderElevation: 20,
-      centerTitle: true,
-      elevation: 20,
+      centerTitle: false,
     );
   }
 }

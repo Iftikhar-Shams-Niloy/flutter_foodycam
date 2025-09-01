@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_foodycam/core/constants.dart';
 
 class CameraView extends StatelessWidget {
   final ImageProvider? image;
@@ -15,8 +16,10 @@ class CameraView extends StatelessWidget {
         height: screenSize.height / 2,
         width: screenSize.width - 50,
         decoration: BoxDecoration(
+          color: Theme.of(context).brightness == Brightness.light
+              ? colorSchemeLight.primaryContainer
+              : colorSchemeDark.primary,
           borderRadius: BorderRadius.circular(12),
-          // border: Border.all(color: Colors.indigo.shade100, width: 10.0),
           image: image != null
               ? DecorationImage(image: image!, fit: BoxFit.cover)
               : null,
