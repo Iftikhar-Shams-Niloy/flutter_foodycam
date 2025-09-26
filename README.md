@@ -20,10 +20,11 @@
 
 <h2> Features</h2>
 <ul>
-  <li><strong>Camera-first UX</strong>: capture and organize food photos (extendable to filters, tags, sharing).</li>
+  <li><strong>Camera-first UX</strong>: Capture and organize food photos (extendable to filters, tags, sharing).</li>
   <li><strong>Cross-platform</strong>: Android, iOS, Web, Windows, macOS, and Linux from a single codebase.</li>
-  <li><strong>AI playground</strong>: an included Jupyter Notebook to experiment with model loading and testing on images.</li>
+  <li><strong>AI playground</strong>: An included Jupyter Notebook to experiment with model loading and testing on images.</li>
   <li><strong>Clean structure</strong>: conventional Flutter project layout for easy navigation and contribution.</li>
+  <li><strong>Multi Theme Support</strong>: Supports both Light and Dark theme. App theme changes according to the theme of the mobile</li>
 </ul>
 
 <h2> Screenshots of the App</h2>
