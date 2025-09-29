@@ -3,7 +3,7 @@
 <h1 align="center">FoodyCam</h1>
 
 <p align="center">
-  A cross-platform Flutter app for capturing and detecting food photos, with an accompanying AI experimentation notebook. The app has simple interface with codes that are clean. It is an excellent project for beginners who want to learn AI integration in their app.
+  A flutter app for capturing and detecting food photos, with an accompanying AI experimentation notebook. The app has simple interface with codes that are clean. It is an excellent project for beginners who want to learn AI integration in their mobile application.
 </p>
 
 <p align="center">
